@@ -1,0 +1,22 @@
+{
+  "name": "stdownloader",
+  "version": "1.0.0",
+  "description": "tried to bypass download",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ."
+  },
+  "keywords": [
+    "streamtape",
+    "download"
+  ],
+  "author": "GoruAkiba",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "node-fetch": "^3.3.2",
+    "request": "^2.88.2"
+  }
+}
