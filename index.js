@@ -3,7 +3,7 @@ import _request from "request";
 import express from "express";
 
 import {stdownloader} from "./stDownloader.js";
-import scriptInfo from "./package.json" assert { type: 'json' };
+// import scriptInfo from "./package.json" assert { type: 'json' };
 
 const app = express();
 const engine = new stdownloader();
@@ -12,11 +12,9 @@ const engine = new stdownloader();
 const _Port = 3000;
 
 app.get("/", (req,resp) => {
-    var {name, version, description} = scriptInfo;
+    // var {name, version, description} = scriptInfo;
     const data = {
-        name,
-        version,
-        description
+        msg: "ok"
     }
     return resp.send(data);
 })
@@ -47,11 +45,3 @@ app.get("/down", async (req, resp)=>{
   app.listen(_Port, ()=>{
     console.log("app listening to: ",_Port);
   })
-
-// (async()=>{
-//     var url_test = "https://streamtape.com/v/4PRMjYPDqZCKAma"
-//     const engine = new stdownloader();
-
-//     var url = await engine.getDownloadlink(url_test);
-//     console.log(url);
-// })();
