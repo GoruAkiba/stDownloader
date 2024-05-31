@@ -1,4 +1,3 @@
-import fetch from "node-fetch";
 export class stdownloader {
     constructor(){
         this.regex = /document\.getElementById\(\'norobotlink\'\)\.innerHTML \= ([\d a-zA-Z0-9!@#$%^&*()_+\-=\[\]{}':"\\|,.<>\/?]*)\;/;
